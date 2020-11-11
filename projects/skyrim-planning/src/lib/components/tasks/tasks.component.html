@@ -1,0 +1,42 @@
+<form [formGroup]="addTaskForm">
+  <mat-form-field>
+    <input
+      type="number"
+      formControlName="code"
+      matInput
+      #message
+      maxlength="4"
+      placeholder="code"
+    />
+    <mat-error *ngIf="error">You must digit a valid code</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      type="text"
+      formControlName="title"
+      matInput
+      #message
+      maxlength="15"
+      placeholder="title"
+    />
+    <mat-error *ngIf="error">You must digit a valid title</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input type="text" formControlName="labels" matInput maxlength="100" placeholder="labels" />
+    <mat-error *ngIf="error">You must digit a valid labels</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input type="number" formControlName="estimate" matInput maxlength="4" placeholder="estimate" />
+    <mat-error *ngIf="error">You must digit a estimate</mat-error>
+  </mat-form-field>
+  <button
+    class="addTask"
+    type="button"
+    mat-stroked-button
+    color="primary"
+    (click)="submit()"
+    mat-button
+  >
+    Add
+  </button>
+</form>
