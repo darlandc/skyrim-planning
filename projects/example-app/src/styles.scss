@@ -5,3 +5,21 @@ body {
   color: white;
   background: black;
 }
+mat-form-field {
+  border: 1px solid violet;
+  display: flex;
+  height: 30px;
+}
+button.mat-button {
+  border: 1px solid blue;
+  clear: both;
+  display: flex;
+  font-size: 1rem;
+}
+.error {
+  color: red;
+  font-size: 1rem;
+}
+.log {
+  color: greenyellow;
+}

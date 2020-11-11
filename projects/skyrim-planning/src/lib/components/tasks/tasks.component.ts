@@ -19,6 +19,7 @@ export class TasksComponent implements OnInit {
   posts: any;
   controls: {};
   id = 0;
+  log = 'valid log';
 
   constructor(private fb: FormBuilder) {
   this.addTaskForm = this.fb.group({
@@ -33,9 +34,15 @@ ngOnInit(): void {
   console.log('--- task component is alive!');
 }
 
+test(){
+  console.log(this.log);
+}
+
 submit() {
   if (!this.addTaskForm.valid) {
     this.error = true;
+    this.log = 'form invalid';
+    debugger
   } else {
     this.error = false;
     const e = {

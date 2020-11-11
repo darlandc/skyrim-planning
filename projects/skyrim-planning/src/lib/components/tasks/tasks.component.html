@@ -6,7 +6,6 @@
       matInput
       #message
       maxlength="4"
-      placeholder="code"
     />
     <mat-error *ngIf="error">You must digit a valid code</mat-error>
   </mat-form-field>
@@ -17,16 +16,25 @@
       matInput
       #message
       maxlength="15"
-      placeholder="title"
     />
     <mat-error *ngIf="error">You must digit a valid title</mat-error>
   </mat-form-field>
   <mat-form-field>
-    <input type="text" formControlName="labels" matInput maxlength="100" placeholder="labels" />
+    <input
+      type="text"
+      formControlName="labels"
+      matInput
+      maxlength="100"
+    />
     <mat-error *ngIf="error">You must digit a valid labels</mat-error>
   </mat-form-field>
   <mat-form-field>
-    <input type="number" formControlName="estimate" matInput maxlength="4" placeholder="estimate" />
+    <input
+      type="number"
+      formControlName="estimate"
+      matInput
+      maxlength="4"
+    />
     <mat-error *ngIf="error">You must digit a estimate</mat-error>
   </mat-form-field>
   <button
@@ -39,4 +47,18 @@
   >
     Add
   </button>
+  <button
+  class="testButton"
+  type="button"
+  mat-stroked-button
+  color="primary"
+  (click)="test()"
+  mat-button
+>
+  Test
+</button>
 </form>
+<br>
+<div [ngClass]="['error']">
+  <span>{{ log }} </span>
+</div>
