@@ -33,8 +33,8 @@ export class TasksComponent implements OnInit {
 
 ngOnInit(): void {
   this.tasks = [
-    { id: 1, name: 'Task one' },
-    { id: 2, name: 'Task two' }
+    { code: 1, title: 'Task one', estimate: 2 },
+    { code: 2, title: 'Task two', estimate: 3 }
   ];
   // this.tasks = [];
   console.log('--- task component is alive!');

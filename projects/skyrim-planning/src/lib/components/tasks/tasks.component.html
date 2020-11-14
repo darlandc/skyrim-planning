@@ -1,7 +1,15 @@
 <ng-template [ngIf]="tasks">
   <ul>
-    <li *ngFor="let task of tasks">
-      <span>{{ task.id  }}</span> {{ task.name }}
+    <li class="task-list" *ngFor="let task of tasks">
+      <div class="">
+
+      <span>{{ task.code  }}</span> {{ task.title }}
+    </div>
+    <div class="">
+      <footer>
+          Estimate: {{ task.estimate }} hours
+        </footer>
+      </div>
     </li>
   </ul>
 </ng-template>
@@ -11,3 +19,9 @@
 <ng-template [ngIf]="error">
   <p>testing orange!</p>
   </ng-template>
+
+  <style>
+  .task-list * {
+    outline: 1px dashed blue;
+  }
+  </style>
