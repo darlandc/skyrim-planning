@@ -12,3 +12,10 @@ import { SkyrimPlanningComponent } from './skyrim-planning.component';
   exports: [SkyrimPlanningComponent]
 })
 export class SkyrimPlanningModule { }
+
+// teams
+// sprints
+// stories
+// tasks
+// bugfixes
+// planning poker
