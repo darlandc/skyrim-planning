@@ -20,6 +20,7 @@ export class TasksComponent implements OnInit {
   controls: {};
   id = 0;
   log = 'valid log';
+  tasks;
 
   constructor(private fb: FormBuilder) {
   this.addTaskForm = this.fb.group({
@@ -31,18 +32,23 @@ export class TasksComponent implements OnInit {
 }
 
 ngOnInit(): void {
+  this.tasks = [
+    { id: 1, name: 'Task one' },
+    { id: 2, name: 'Task two' }
+  ];
+  // this.tasks = [];
   console.log('--- task component is alive!');
+  console.log('tasks :>> ', this.tasks);
 }
 
-test(){
+test(): void {
   console.log(this.log);
 }
 
-submit() {
+submit(): void {
   if (!this.addTaskForm.valid) {
     this.error = true;
     this.log = 'form invalid';
-    debugger
   } else {
     this.error = false;
     const e = {
@@ -51,6 +57,10 @@ submit() {
     this.addTask.emit(e);
     console.log(e);
   }
+}
+
+toggle(): void{
+  this.error = !this.error;
 }
 
 }

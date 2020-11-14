@@ -1,64 +1,13 @@
-<form [formGroup]="addTaskForm">
-  <mat-form-field>
-    <input
-      type="number"
-      formControlName="code"
-      matInput
-      #message
-      maxlength="4"
-    />
-    <mat-error *ngIf="error">You must digit a valid code</mat-error>
-  </mat-form-field>
-  <mat-form-field>
-    <input
-      type="text"
-      formControlName="title"
-      matInput
-      #message
-      maxlength="15"
-    />
-    <mat-error *ngIf="error">You must digit a valid title</mat-error>
-  </mat-form-field>
-  <mat-form-field>
-    <input
-      type="text"
-      formControlName="labels"
-      matInput
-      maxlength="100"
-    />
-    <mat-error *ngIf="error">You must digit a valid labels</mat-error>
-  </mat-form-field>
-  <mat-form-field>
-    <input
-      type="number"
-      formControlName="estimate"
-      matInput
-      maxlength="4"
-    />
-    <mat-error *ngIf="error">You must digit a estimate</mat-error>
-  </mat-form-field>
-  <button
-    class="addTask"
-    type="button"
-    mat-stroked-button
-    color="primary"
-    (click)="submit()"
-    mat-button
-  >
-    Add
-  </button>
-  <button
-  class="testButton"
-  type="button"
-  mat-stroked-button
-  color="primary"
-  (click)="test()"
-  mat-button
->
-  Test
-</button>
-</form>
-<br>
-<div [ngClass]="['error']">
-  <span>{{ log }} </span>
-</div>
+<ng-template [ngIf]="tasks">
+  <ul>
+    <li *ngFor="let task of tasks">
+      <span>{{ task.id  }}</span> {{ task.name }}
+    </li>
+  </ul>
+</ng-template>
+
+<button (click)="toggle()">tap!</button>
+
+<ng-template [ngIf]="error">
+  <p>testing orange!</p>
+  </ng-template>
