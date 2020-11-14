@@ -1,15 +1,13 @@
 <h1>Sprints component:</h1>
 
+<ng-template [ngIf]="step"> Step: {{ step }} </ng-template>
+<br /><br />
+<p [hidden]="true">hidden</p>
 <button (click)="prev()">prev</button>
-
 <button (click)="next()">next</button>
-<br>
-<ng-template [ngIf]="step">
-  Step: {{ step }}
-</ng-template>
 
 <style>
-* {
-  color: goldenrod;
-}
+  * {
+    color: goldenrod;
+  }
 </style>

@@ -18,3 +18,4 @@ import { SkyrimPlanningModule } from 'projects/skyrim-planning/src/public-api';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

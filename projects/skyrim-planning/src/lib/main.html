@@ -1,6 +1,13 @@
 <h1>{{ works }}</h1>
+<!-- <sky-tasks></sky-tasks>
+<sky-sprints></sky-sprints> -->
 
-<sky-tasks></sky-tasks>
+ <nav>
+  <button [routerLink]="'/'">home</button>
+  <button routerLinkActive="active" [routerLink]="'sprints'">sprints</button>
+  <button routerLinkActive="active" [routerLink]="'tasks'">tasks</button>
+  <button routerLinkActive="active" [routerLink]="'board'">board</button>
+ </nav>
+ <router-outlet></router-outlet>
 
-<sky-sprints></sky-sprints>
 
