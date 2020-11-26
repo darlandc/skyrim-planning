@@ -16,14 +16,26 @@
   </ul>
 </ng-template>
 
-<button (click)="toggle()">tap!</button>
+<!-- <form [formGroup]="addTaskForm" (ngSubmit)="">
+  <ul>
+    <li>
+     <input placeholder="code" formControlName="code" type="text" name="code" id="code">
+    </li>
+    <li>
+      <input placeholder="title" formControlName="title" type="text" name="title" id="title">
+     </li>
+     <li>
+      <input placeholder="labels" formControlName="labels" type="text" name="labels" id="labels">
+     </li>
+     <li>
+      <input placeholder="estimate" formControlName="estimate" type="text" name="estimate" id="estimate">
+     </li>
+  </ul>
+  <button type="submit">Submit</button>
+</form> -->
+
+<button (click)="toggle()">show error</button>
 
 <ng-template [ngIf]="error">
-  <p>testing orange!</p>
-  </ng-template>
-
-  <style>
-  .task-list * {
-    outline: 1px dashed blue;
-  }
-  </style>
+  <p>testing error message in orange!</p>
+</ng-template>

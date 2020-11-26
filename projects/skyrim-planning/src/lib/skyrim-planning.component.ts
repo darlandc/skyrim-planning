@@ -3,8 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'lib-skyrim',
   templateUrl: './main.html',
-  styles: [
-  ]
+  styleUrls: [ './main.scss' ]
 })
 export class SkyrimPlanningComponent implements OnInit {
 
