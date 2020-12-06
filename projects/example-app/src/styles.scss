@@ -3,6 +3,7 @@ span {
 }
 p {
   color: orangered;
+  font-size: 1rem;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -27,7 +28,12 @@ button {
   border: none;
   margin: 0 12px;
   font-size: 1rem;
+  cursor: pointer;
 }
 .active {
   color: aqua!important;
+}
+h1 {
+  color: white;
+  font-size: 1rem;
 }

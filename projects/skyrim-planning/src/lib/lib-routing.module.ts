@@ -1,5 +1,4 @@
 import { BoardComponent } from './components/board/board.component';
-import { SkyrimPlanningComponent } from './skyrim-planning.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { SprintsComponent } from './components/sprints/sprints.component';
 import { NgModule } from '@angular/core';
